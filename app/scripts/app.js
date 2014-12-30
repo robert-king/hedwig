@@ -2,7 +2,8 @@
 
 angular
   .module('hedwigApp', [
-    'ngRoute'
+    'ngRoute',
+    'xeditable'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -13,4 +14,7 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+  })
+  .run(function(editableOptions) {
+    editableOptions.theme = 'bs3'; //or bs2 or default
   });

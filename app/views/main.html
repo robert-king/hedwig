@@ -1,36 +1,45 @@
 <div class="header">
-  <ul class="nav nav-pills pull-right">
-    <li class="active"><a ng-href="#">Home</a></li>
-    <li><a ng-href="#">About</a></li>
-    <li><a ng-href="#">Contact</a></li>
-  </ul>
-  <h3 class="text-muted">hedwig</h3>
+    <!--<ul class="nav nav-pills pull-right">-->
+    <!--<li class="active"><a ng-href="#">Home</a></li>-->
+    <!--<li><a ng-href="#">Config</a></li>-->
+    <!--</ul>-->
+    <img src="images/hedwig-logo-small.png">
+    <img src="images/hedwig-mail.png">
+    <span>The simple social network</span>
+    <span>- less realtime, less content</span>
 </div>
 
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6">
+            <h4>Owlery</h4>
+            You don't have any owls
+        </div>
+        <div class="col-xs-6">
+            <h4>Outgoing Owls</h4>
+            <a href="#" editable-text="user.name">{{ user.name || "new message" }}</a>
+        </div>
+    </div>
 </div>
 
 <div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
+    <h4>Wizards & Witches:</h4>
+    Your Email: (todo: verify ownership of email address & FB login)
+    <input ng-model="useremail"><br>
+    Email me if the Owlery is messy <select>
+        <option>yes</option>
+        <option>no</option>
+    </select>
+    <h4>Send Groups (comma seperated)</h4>
+    group1:
+    <input ng-list ng-model="group1">{{group1}}<br>
+    group2:
+    <input ng-list ng-model="group2">{{group2}}<br>
+    group3:
+    <input ng-list ng-model="group3">{{group3}}<br>
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
 </div>
 
-<div class="footer">
-  <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-</div>
+<!--<div class="footer">-->
+<!--<p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>-->
+<!--</div>-->
